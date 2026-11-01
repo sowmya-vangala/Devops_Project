@@ -1,0 +1,27 @@
+/* Add provider page - reuses form-card styles from BookAppointment.css */
+.add-provider-page {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+/* Checkbox group styling */
+.checkbox-group {
+  margin-bottom: 20px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.checkbox-label input[type='checkbox'] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #2563eb;
+}

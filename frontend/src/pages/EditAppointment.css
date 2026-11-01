@@ -1,0 +1,6 @@
+/* Edit appointment page - reuses form-card and form-group styles from BookAppointment.css */
+.edit-appointment-page {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 32px 20px;
+}

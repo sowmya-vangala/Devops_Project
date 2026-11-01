@@ -1,0 +1,160 @@
+/* Service providers page layout */
+.providers-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+/* Header with title and add button */
+.providers-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.providers-header h1 {
+  font-size: 1.8rem;
+  color: #1f2937;
+  margin: 0;
+}
+
+.providers-subtitle {
+  color: #6b7280;
+  font-size: 0.95rem;
+  margin: 4px 0 0 0;
+}
+
+/* Add provider button (admin only) */
+.add-provider-btn {
+  background-color: #2563eb;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background-color 0.2s;
+}
+
+.add-provider-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* Responsive provider card grid */
+.providers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Individual provider card */
+.provider-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+
+.provider-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Provider avatar circle with initial */
+.provider-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 auto 16px;
+}
+
+/* Provider name */
+.provider-name {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 4px 0;
+}
+
+/* Provider specialization */
+.provider-specialization {
+  color: #2563eb;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0 0 16px 0;
+}
+
+/* Contact information block */
+.provider-contact {
+  text-align: left;
+  padding: 12px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.contact-item {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 6px;
+  font-size: 0.85rem;
+}
+
+.contact-item:last-child {
+  margin-bottom: 0;
+}
+
+.contact-label {
+  color: #6b7280;
+  font-weight: 500;
+  min-width: 55px;
+  flex-shrink: 0;
+}
+
+.contact-value {
+  color: #374151;
+  word-break: break-word;
+}
+
+/* Provider active/inactive status badge */
+.provider-status {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.provider-status.active {
+  background-color: #d1fae5;
+  color: #047857;
+}
+
+.provider-status.inactive {
+  background-color: #f3f4f6;
+  color: #6b7280;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .providers-header {
+    flex-direction: column;
+  }
+
+  .providers-grid {
+    grid-template-columns: 1fr;
+  }
+}

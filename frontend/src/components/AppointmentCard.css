@@ -1,0 +1,123 @@
+/* Appointment card - clickable card component */
+.appointment-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  border-left: 4px solid #e5e7eb;
+}
+
+.appointment-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.appointment-card:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* Status-based colour coding for card left border */
+.status-scheduled {
+  border-left-color: #3b82f6;
+}
+
+.status-confirmed {
+  border-left-color: #10b981;
+}
+
+.status-cancelled {
+  border-left-color: #6b7280;
+}
+
+.status-completed {
+  border-left-color: #8b5cf6;
+}
+
+/* Status badge in top-right corner */
+.card-status-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Badge colours matching status */
+.status-scheduled .card-status-badge {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+}
+
+.status-confirmed .card-status-badge {
+  background-color: #d1fae5;
+  color: #047857;
+}
+
+.status-cancelled .card-status-badge {
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
+
+.status-completed .card-status-badge {
+  background-color: #ede9fe;
+  color: #6d28d9;
+}
+
+/* Card title (provider name) */
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 12px 0;
+  padding-right: 80px; /* Avoid overlap with status badge */
+}
+
+/* Info rows (date, time) */
+.card-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+.card-label {
+  color: #6b7280;
+  font-weight: 500;
+  min-width: 45px;
+}
+
+.card-value {
+  color: #374151;
+  font-weight: 500;
+}
+
+/* Reason section */
+.card-reason {
+  margin-top: 10px;
+}
+
+.card-reason-text {
+  color: #4b5563;
+  font-size: 0.85rem;
+  margin: 4px 0 0 0;
+  line-height: 1.4;
+}
+
+/* Footer hint text */
+.card-footer {
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px solid #f3f4f6;
+  font-size: 0.8rem;
+  color: #9ca3af;
+  text-align: right;
+}

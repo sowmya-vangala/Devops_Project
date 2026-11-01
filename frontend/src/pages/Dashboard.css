@@ -1,0 +1,186 @@
+/* Dashboard page layout */
+.dashboard-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+/* Header with title and action button */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.dashboard-header h1 {
+  font-size: 1.8rem;
+  color: #1f2937;
+  margin: 0;
+}
+
+.dashboard-subtitle {
+  color: #6b7280;
+  font-size: 0.95rem;
+  margin: 4px 0 0 0;
+}
+
+/* Book appointment button */
+.book-btn {
+  background-color: #2563eb;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background-color 0.2s;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+}
+
+.book-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* Filter bar with status buttons */
+.filter-bar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  border: 1.5px solid #e5e7eb;
+  background: #ffffff;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #4b5563;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-btn:hover {
+  border-color: #2563eb;
+  color: #2563eb;
+}
+
+.filter-btn.filter-active {
+  background-color: #2563eb;
+  border-color: #2563eb;
+  color: #ffffff;
+}
+
+/* Status-specific filter colours when active */
+.filter-scheduled.filter-active {
+  background-color: #3b82f6;
+  border-color: #3b82f6;
+}
+
+.filter-confirmed.filter-active {
+  background-color: #10b981;
+  border-color: #10b981;
+}
+
+.filter-completed.filter-active {
+  background-color: #8b5cf6;
+  border-color: #8b5cf6;
+}
+
+.filter-cancelled.filter-active {
+  background-color: #6b7280;
+  border-color: #6b7280;
+}
+
+/* Responsive appointment card grid */
+.appointments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+/* Loading container with spinner */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  color: #6b7280;
+}
+
+/* Main loading spinner */
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #e5e7eb;
+  border-top-color: #2563eb;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Retry button inside error banner */
+.retry-btn {
+  background: none;
+  border: 1px solid #dc2626;
+  color: #dc2626;
+  padding: 4px 12px;
+  border-radius: 4px;
+  margin-left: 12px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.retry-btn:hover {
+  background-color: #dc2626;
+  color: #ffffff;
+}
+
+/* Empty state when no appointments exist */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.empty-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.empty-state h3 {
+  color: #1f2937;
+  font-size: 1.3rem;
+  margin: 0 0 8px 0;
+}
+
+.empty-state p {
+  color: #6b7280;
+  margin: 0 0 20px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .dashboard-header {
+    flex-direction: column;
+  }
+
+  .appointments-grid {
+    grid-template-columns: 1fr;
+  }
+}
